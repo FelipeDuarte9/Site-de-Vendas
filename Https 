@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Afiliados</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f4; }
+        .container { max-width: 800px; margin: 20px auto; padding: 20px; background: white; border-radius: 10px; }
+        .produto { border-bottom: 1px solid #ddd; padding: 10px; }
+        img { max-width: 100px; }
+        a { text-decoration: none; color: white; background: blue; padding: 10px; border-radius: 5px; display: inline-block; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Loja de Afiliados</h1>
+        <div id="produtos"></div>
+    </div><script>
+    const produtos = [
+        { nome: "Produto 1", imagem: "https://via.placeholder.com/100", link: "https://seu-link-afiliado.com/produto1" },
+        { nome: "Produto 2", imagem: "https://via.placeholder.com/100", link: "https://seu-link-afiliado.com/produto2" }
+    ];
+    
+    const container = document.getElementById('produtos');
+    produtos.forEach(produto => {
+        container.innerHTML += `
+            <div class="produto">
+                <h2>${produto.nome}</h2>
+                <img src="${produto.imagem}" alt="${produto.nome}">
+                <br>
+                <a href="${produto.link}" target="_blank">Comprar</a>
+            </div>
+        `;
+    });
+</script>
+
+</body>
+</html>
